@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fs01/pages/fs01_01/exercise_01/exercise_01_page.dart';
+
 import 'package:fs01/widgets/app_button.dart';
 
+import 'exercise_01/exercise_01_page.dart';
 import 'exercise_02/exercise_02_page.dart';
 
 class Lesson01 extends StatelessWidget {

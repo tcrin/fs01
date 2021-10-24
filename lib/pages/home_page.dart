@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fs01/pages/fs01_01/lesson_01_page.dart';
+import 'package:fs01/modules/fs01_01/lesson_01_page.dart';
+import 'package:fs01/modules/fs01_02/widgets_page/all_widget_page.dart';
+import 'package:fs01/modules/fs01_02/lesson_02_page.dart';
+
 import 'package:fs01/widgets/app_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +30,10 @@ class HomePage extends StatelessWidget {
           ),
           AppButton(
             onPressed: () {
-
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Lesson02()),
+              );
             },
             lable: 'Lesson 02',
           ),
