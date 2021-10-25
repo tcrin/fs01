@@ -4,8 +4,6 @@ import 'package:fs01/modules/fs01_02/widgets_page/circle_avatar_page.dart';
 import 'package:fs01/modules/fs01_02/widgets_page/status_active_page.dart';
 import 'package:fs01/modules/fs01_02/widgets_page/status_message_page.dart';
 import 'package:fs01/widgets/app_button.dart';
-import 'package:fs01/widgets/status_message.dart';
-
 
 class AllWidget extends StatelessWidget {
   const AllWidget({Key? key}) : super(key: key);
@@ -23,37 +21,45 @@ class AllWidget extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const StatusMessagePage()),
+                  MaterialPageRoute(
+                    builder: (context) => const StatusMessagePage(),
+                  ),
                 );
               },
-              lable: '1. Status message',
+              label: '1. Status message',
             ),
             AppButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const StatusActivePage()),
+                  MaterialPageRoute(
+                    builder: (context) => const StatusActivePage(),
+                  ),
                 );
               },
-              lable: '2. Status active',
+              label: '2. Status active',
             ),
             AppButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const BorderPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const BorderPage(),
+                  ),
                 );
               },
-              lable: '3. Circle border',
+              label: '3. Circle border',
             ),
             AppButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CircleAvatarPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const CircleAvatarPage(),
+                  ),
                 );
               },
-              lable: '4. Circle Avatar',
+              label: '4. Circle Avatar',
             ),
           ],
         ));

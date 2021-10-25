@@ -23,19 +23,23 @@ class Lesson01 extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Exercise01()),
+                MaterialPageRoute(
+                  builder: (context) => const Exercise01(),
+                ),
               );
             },
-            lable: 'Exercise 01',
+            label: 'Exercise 01',
           ),
           AppButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Exercise02()),
+                MaterialPageRoute(
+                  builder: (context) => const Exercise02(),
+                ),
               );
             },
-            lable: 'Exercise 02',
+            label: 'Exercise 02',
           ),
         ],
       ),

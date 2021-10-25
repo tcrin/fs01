@@ -30,38 +30,53 @@ class MessageComponent extends StatelessWidget {
               flex: 8,
               child: Container(
                 decoration: const BoxDecoration(
-                 // color: Colors.white,
+                  // color: Colors.white,
                   border: Border(
                     bottom: BorderSide(width: 2, color: Colors.black),
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.only(
-                      right: size.width * 0.02,
-                      top: size.height * 0.02,
-                      bottom: size.height * 0.02),
+                  padding: EdgeInsets.only(right: size.width * 0.02),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 10,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
                           Expanded(
-                              flex: 12,
-                              child: Text(
-                                'Herman Pope',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,color: AppColor.textColor),
-                              )),
-                          Expanded(flex: 3, child: Text('12:54 PM',style: TextStyle(color: AppColor.timeColor),)),
+                            flex: 12,
+                            child: Text(
+                              'Herman Pope',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: AppColor.textColor,
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 3,
+                            child: Text(
+                              '12:54 PM',
+                              style: TextStyle(
+                                color: AppColor.timeColor,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
-                      const SizedBox(height: 10,),
-                      const Text('What kind of music do you like ?',style: TextStyle(
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        'What kind of music do you like ?',
+                        style: TextStyle(
                           fontSize: 13,
-                          fontWeight: FontWeight.w400,color: AppColor.textColor),),
+                          fontWeight: FontWeight.w400,
+                          color: AppColor.textColor,
+                        ),
+                      ),
                     ],
                   ),
                 ),

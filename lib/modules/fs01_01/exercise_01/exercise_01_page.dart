@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fs01/widgets/block_rectangle.dart';
+
 //ChallengeLayout
 class Exercise01 extends StatelessWidget {
   const Exercise01({Key? key}) : super(key: key);
@@ -14,69 +15,74 @@ class Exercise01 extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                  flex: 2,
-                  child: Column(
-                    children: [
-                      Expanded(
-                          flex: 2,
-                          child: Row(
-                            children: [
-                              Expanded(
+                flex: 2,
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Column(
+                              children: const [
+                                Block(
+                                  color: Colors.grey,
+                                ),
+                                Block(
+                                  color: Colors.orange,
+                                ),
+                                Block(
+                                  color: Colors.blue,
+                                ),
+                                Block(
+                                  color: Colors.pinkAccent,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              children: [
+                                const Block(
+                                  flex: 3,
+                                  color: Colors.blueAccent,
+                                ),
+                                Expanded(
                                   flex: 1,
-                                  child: Column(
+                                  child: Row(
                                     children: const [
                                       Block(
-                                        color: Colors.grey,
+                                        color: Colors.green,
                                       ),
                                       Block(
-                                        color: Colors.orange,
-                                      ),
-                                      Block(
-                                        color: Colors.blue,
-                                      ),
-                                      Block(
-                                        color: Colors.pinkAccent,
+                                        color: Colors.yellow,
                                       ),
                                     ],
-                                  )),
-                              Expanded(
-                                  flex: 2,
-                                  child: Column(
-                                    children: [
-                                      const Block(
-                                        flex: 3,
-                                        color: Colors.blueAccent,
-                                      ),
-                                      Expanded(
-                                          flex: 1,
-                                          child: Row(
-                                            children: const [
-                                              Block(
-                                                color: Colors.green,
-                                              ),
-                                              Block(
-                                                color: Colors.yellow,
-                                              ),
-                                            ],
-                                          ))
-                                    ],
-                                  ))
-                            ],
-                          )),
-                      const Block(
-                        flex: 3,
-                        color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      const Block(
-                        flex: 3,
-                        color: Colors.yellow,
-                      ),
-                      const Block(
-                        flex: 3,
-                        color: Colors.white,
-                      ),
-                    ],
-                  )),
+                    ),
+                    const Block(
+                      flex: 3,
+                      color: Colors.black,
+                    ),
+                    const Block(
+                      flex: 3,
+                      color: Colors.yellow,
+                    ),
+                    const Block(
+                      flex: 3,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+              ),
               const Block(
                 flex: 5,
                 color: Colors.pink,

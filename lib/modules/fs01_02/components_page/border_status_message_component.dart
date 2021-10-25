@@ -12,8 +12,8 @@ class BorderMessage extends StatelessWidget {
       children: [
         Stack(
           children: const [
-            StatusMessage(count: 3,),
-            BorderCircleStatus(),
+            StatusMessage(count: 4,),
+            BorderCircleStatus(deep: 1,),
           ],
         )
       ],

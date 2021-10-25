@@ -7,9 +7,9 @@ class Block extends StatelessWidget {
 
   const Block(
       {Key? key,
-        this.flex = 1,
-        this.color = Colors.white,
-        this.margin = EdgeInsets.zero})
+      this.flex = 1,
+      this.color = Colors.white,
+      this.margin = EdgeInsets.zero})
       : super(key: key);
 
   @override

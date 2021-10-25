@@ -28,37 +28,37 @@ class AllComponent extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const BorderMessage()),
+                  MaterialPageRoute(builder: (context) => const BorderMessage(),),
                 );
               },
-              lable: '1. Border message',
+              label: '1. Border message',
             ),
             AppButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const BorderActive()),
+                  MaterialPageRoute(builder: (context) => const BorderActive(),),
                 );
               },
-              lable: '2. Border active',
+              label: '2. Border active',
             ),
             AppButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const AvatarMessage()),
+                  MaterialPageRoute(builder: (context) => const AvatarMessage(),),
                 );
               },
-              lable: '3. Avatar message',
+              label: '3. Avatar message',
             ),
             AppButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MessageComponent()),
+                  MaterialPageRoute(builder: (context) => const MessageComponent(),),
                 );
               },
-              lable: '4. Message',
+              label: '4. Message',
             ),
           ],
         ));

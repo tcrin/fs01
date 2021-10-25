@@ -25,7 +25,7 @@ class Exercise02 extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const ChallengeRow()),
                 );
               },
-              lable: '1. Challenge Row',
+              label: '1. Challenge Row',
             ),
             AppButton(
               onPressed: () {
@@ -35,7 +35,7 @@ class Exercise02 extends StatelessWidget {
                       builder: (context) => const ChallengeColumn()),
                 );
               },
-              lable: '2. Challenge Column',
+              label: '2. Challenge Column',
             ),
             AppButton(
               onPressed: () {
@@ -45,7 +45,7 @@ class Exercise02 extends StatelessWidget {
                       builder: (context) => const ChallengeGirdView()),
                 );
               },
-              lable: '3. Challenge GirdView',
+              label: '3. Challenge GirdView',
             ),
             AppButton(
               onPressed: () {
@@ -54,7 +54,7 @@ class Exercise02 extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const ChallengeMix()),
                 );
               },
-              lable: '4. Challenge Mix',
+              label: '4. Challenge Mix',
             ),
           ],
         ));

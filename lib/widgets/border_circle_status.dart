@@ -18,12 +18,13 @@ class BorderCircleStatus extends StatelessWidget {
       width: sizeBorder,
       height: sizeBorder,
       decoration: BoxDecoration(
-          color: Colors.transparent,
-          shape: BoxShape.circle,
-          border: Border.all(
-            color: color,
-            width: deep,
-          )),
+        color: Colors.transparent,
+        shape: BoxShape.circle,
+        border: Border.all(
+          color: color,
+          width: deep,
+        ),
+      ),
     );
   }
 }

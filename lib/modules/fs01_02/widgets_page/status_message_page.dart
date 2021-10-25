@@ -6,14 +6,13 @@ class StatusMessagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: const Text('Status Message'),
-      ),
-      body: const Center(
-        child: StatusMessage(count: 5,),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        StatusMessage(
+          count: 3,
+        ),
+      ],
     );
   }
 }

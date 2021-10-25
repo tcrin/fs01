@@ -24,17 +24,24 @@ class StatusMessage extends StatelessWidget {
       height: size,
       // color: Colors.green,
       decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [
-          color1,
-          color2,
-        ], begin: Alignment.bottomLeft, end: Alignment.topRight),
+        gradient: LinearGradient(
+          colors: [
+            color1,
+            color2,
+          ],
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+        ),
         shape: BoxShape.circle,
       ),
       child: Center(
         child: Text(
           '$count',
           style: TextStyle(
-              decoration: TextDecoration.none, color: textColor, fontSize: 10),
+            decoration: TextDecoration.none,
+            color: textColor,
+            fontSize: 10,
+          ),
         ),
       ),
     );

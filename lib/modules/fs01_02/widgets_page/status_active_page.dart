@@ -6,14 +6,11 @@ class StatusActivePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: const Text('Status Active'),
-      ),
-      body: const Center(
-        child: StatusActive(),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        StatusActive(),
+      ],
     );
   }
 }

@@ -23,21 +23,24 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Lesson01()),
+                MaterialPageRoute(
+                  builder: (context) => const Lesson01(),
+                ),
               );
             },
-            lable: 'Lesson 01',
+            label: 'Lesson 01',
           ),
           AppButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Lesson02()),
+                MaterialPageRoute(
+                  builder: (context) => const Lesson02(),
+                ),
               );
             },
-            lable: 'Lesson 02',
+            label: 'Lesson 02',
           ),
-
         ],
       ),
     );

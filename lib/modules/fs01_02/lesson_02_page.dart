@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fs01/modules/fs01_02/widgets_page/all_widget_page.dart';
 import 'package:fs01/widgets/app_button.dart';
 
-
 import 'components_page/all_component.dart';
-
 
 class Lesson02 extends StatelessWidget {
   const Lesson02({Key? key}) : super(key: key);
@@ -22,19 +20,23 @@ class Lesson02 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const AllWidget()),
+                  MaterialPageRoute(
+                    builder: (context) => const AllWidget(),
+                  ),
                 );
               },
-              lable: 'All Widget',
+              label: 'All Widget',
             ),
             AppButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const AllComponent()),
+                  MaterialPageRoute(
+                    builder: (context) => const AllComponent(),
+                  ),
                 );
               },
-              lable: 'All Component',
+              label: 'All Component',
             ),
           ],
         ));

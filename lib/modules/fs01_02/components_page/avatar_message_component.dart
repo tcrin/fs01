@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fs01/modules/fs01_02/components_page/border_status_message_component.dart';
-import 'package:fs01/values/app_assets.dart';
 import 'package:fs01/widgets/circle_avatar.dart';
-import 'package:fs01/widgets/status_message.dart';
 
 class AvatarMessage extends StatelessWidget {
   const AvatarMessage({Key? key}) : super(key: key);
@@ -15,7 +13,11 @@ class AvatarMessage extends StatelessWidget {
         Stack(
           children: const [
             CircleAvt(),
-            Positioned(bottom: 0, right: 0, child: BorderMessage())
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: BorderMessage(),
+            ),
           ],
         ),
       ],
