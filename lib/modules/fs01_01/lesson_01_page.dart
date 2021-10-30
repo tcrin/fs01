@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:fs01/widgets/app_button.dart';
+import 'package:fs01/common/widgets/stateless/button/app_button.dart';
 
 import 'exercise_01/exercise_01_page.dart';
 import 'exercise_02/exercise_02_page.dart';
@@ -24,7 +24,7 @@ class Lesson01 extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const Exercise01(),
+                  builder: (_) => const Exercise01(),
                 ),
               );
             },
@@ -35,7 +35,7 @@ class Lesson01 extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const Exercise02(),
+                  builder: (_) => const Exercise02(),
                 ),
               );
             },

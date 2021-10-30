@@ -7,5 +7,10 @@ class AppColor {
   static const Color pinkLinear = Color(0xffFF62A5);
 
   static const Color textColor = Color(0xffFFFFFF);
+
+  static const Color borderColor = Color(0xffFFFFFF);
+
   static const Color timeColor = Color(0xff4E586E);
+
+  static const Color iconColor = Color(0xffF54B64);
 }

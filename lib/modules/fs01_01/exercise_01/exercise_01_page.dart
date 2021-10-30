@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fs01/widgets/block_rectangle.dart';
+import 'package:fs01/common/widgets/block_rectangle.dart';
 
 //ChallengeLayout
 class Exercise01 extends StatelessWidget {

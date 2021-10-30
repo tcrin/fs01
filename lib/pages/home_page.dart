@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fs01/modules/fs01_01/lesson_01_page.dart';
-import 'package:fs01/modules/fs01_02/widgets_page/all_widget_page.dart';
 import 'package:fs01/modules/fs01_02/lesson_02_page.dart';
+import 'package:fs01/common/widgets/stateless/button/app_button.dart';
+import 'package:fs01/modules/fs01_03/social_app/_23_message_list/_23_message_list.dart';
 
-import 'package:fs01/widgets/app_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const Lesson01(),
+                  builder: (_) => const Lesson01(),
                 ),
               );
             },
@@ -35,11 +35,22 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const Lesson02(),
+                  builder: (_) => const Lesson02(),
                 ),
               );
             },
             label: 'Lesson 02',
+          ),
+          AppButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const MessageListPage(),
+                ),
+              );
+            },
+            label: 'Lesson 03',
           ),
         ],
       ),

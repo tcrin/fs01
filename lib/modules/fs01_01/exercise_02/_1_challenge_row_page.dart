@@ -4,19 +4,27 @@ class ChallengeRow extends StatelessWidget {
   const ChallengeRow({Key? key}) : super(key: key);
 
   Widget createCol() => Flexible(
-      flex: 9,
-      child: Container(
-        color: Colors.teal,
-      ));
+        flex: 9,
+        child: Container(
+          color: Colors.teal,
+        ),
+      );
 
-  Widget createSpace() => const Expanded(flex: 1, child: SizedBox());
+  Widget createSpace() => const Expanded(
+        flex: 1,
+        child: SizedBox(),
+      );
 
   List<Widget> createListCol(int numberCol) {
     var listCol = List<Widget>.empty(growable: true);
     for (int i = 0; i < numberCol; i++) {
-      listCol.add(createCol());
+      listCol.add(
+        createCol(),
+      );
       if (i < numberCol - 1) {
-        listCol.add(createSpace());
+        listCol.add(
+          createSpace(),
+        );
       }
     }
     return listCol;

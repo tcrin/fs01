@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fs01/values/app_colors.dart';
+import 'package:fs01/themes/app_colors.dart';
+import 'package:fs01/themes/app_styles.dart';
 
 class StatusMessage extends StatelessWidget {
   final double size;
@@ -7,6 +8,9 @@ class StatusMessage extends StatelessWidget {
   final Color color2;
   final int count;
   final Color textColor;
+  final double? widthBorder;
+  final Color borderColor;
+  final TextStyle textStyle;
 
   const StatusMessage(
       {Key? key,
@@ -14,7 +18,10 @@ class StatusMessage extends StatelessWidget {
       this.color1 = AppColor.orangeLinear,
       this.color2 = AppColor.pinkLinear,
       this.count = 1,
-      this.textColor = AppColor.textColor})
+      this.textColor = AppColor.textColor,
+      this.widthBorder,
+      this.borderColor = AppColor.borderColor,
+      this.textStyle= AppStyle.h3})
       : super(key: key);
 
   @override
@@ -33,15 +40,17 @@ class StatusMessage extends StatelessWidget {
           end: Alignment.topRight,
         ),
         shape: BoxShape.circle,
+        border: (widthBorder == null)
+            ? null
+            : Border.all(
+                width: widthBorder!,
+                color: borderColor,
+              ),
       ),
       child: Center(
         child: Text(
           '$count',
-          style: TextStyle(
-            decoration: TextDecoration.none,
-            color: textColor,
-            fontSize: 10,
-          ),
+          style: textStyle,
         ),
       ),
     );
