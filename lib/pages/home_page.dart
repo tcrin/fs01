@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fs01/modules/fs01_01/lesson_01_page.dart';
-import 'package:fs01/modules/fs01_02/lesson_02_page.dart';
+import 'package:fs01/modules/fs01_01/session_01_page.dart';
+import 'package:fs01/modules/fs01_02/session_02_page.dart';
 import 'package:fs01/common/widgets/stateless/button/app_button.dart';
 import 'package:fs01/modules/fs01_03/social_app/_23_message_list/_23_message_list.dart';
+import 'package:fs01/modules/fs01_04/exercise_01/download_image_dio.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -28,7 +29,7 @@ class HomePage extends StatelessWidget {
                 ),
               );
             },
-            label: 'Lesson 01',
+            label: 'Session 01',
           ),
           AppButton(
             onPressed: () {
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
                 ),
               );
             },
-            label: 'Lesson 02',
+            label: 'Session 02',
           ),
           AppButton(
             onPressed: () {
@@ -50,7 +51,18 @@ class HomePage extends StatelessWidget {
                 ),
               );
             },
-            label: 'Lesson 03',
+            label: 'Session 03',
+          ),
+          AppButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const DownloadImage(),
+                ),
+              );
+            },
+            label: 'Session 04',
           ),
         ],
       ),
