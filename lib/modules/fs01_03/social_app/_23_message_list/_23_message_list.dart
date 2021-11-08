@@ -69,12 +69,24 @@ class _MessageListPageState extends State<MessageListPage> {
     });
   }
 
+  // getData() async {
+  //   await readJsonMessage();
+  //   await readJsonMessage();
+  // }
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   getData();
+  // }
+
   @override
   Widget build(BuildContext context) {
     setState(() {
       readJsonMessage();
       readJsonActive();
     });
+
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -109,7 +121,6 @@ class _MessageListPageState extends State<MessageListPage> {
                 scrollDirection: Axis.horizontal,
                 itemCount: activeWidget().length,
                 itemBuilder: (_, index) {
-
                   return activeWidget()[index];
                 },
               ),

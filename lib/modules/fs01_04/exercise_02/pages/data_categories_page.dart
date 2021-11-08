@@ -12,14 +12,6 @@ class DataCategories extends StatefulWidget {
 
 class _DataCategoriesState extends State<DataCategories> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    CategoryServiceApi();
-    CategoryServiceApi().fetchCategories();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -39,6 +31,9 @@ class _DataCategoriesState extends State<DataCategories> {
                   itemBuilder: (context, index) {
                     return ListTile(
                       title: Text(snapshot.data[index].title),
+                      leading: snapshot.data[index].images ??
+                          const Icon(Icons.category),
+                      subtitle: Text(snapshot.data[index].description),
                     );
                   });
             }

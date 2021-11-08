@@ -5,9 +5,9 @@ part 'categories.g.dart';
 @JsonSerializable()
 class ListOfCategories {
   final int code;
-  final List<Category> category;
+  final List<Category> data;
 
-  ListOfCategories(this.code, this.category);
+  ListOfCategories(this.code, this.data);
 
   factory ListOfCategories.fromJson(Map<String, dynamic> json) =>
       _$ListOfCategoriesFromJson(json);
@@ -21,7 +21,7 @@ class Category {
   final DateTime? updatedAt;
   final String? title;
   final String? description;
-  final dynamic images;
+  final List? images;
   final int? photoCounts;
 
   Category(

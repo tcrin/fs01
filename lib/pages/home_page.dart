@@ -3,9 +3,7 @@ import 'package:fs01/modules/fs01_01/session_01_page.dart';
 import 'package:fs01/modules/fs01_02/session_02_page.dart';
 import 'package:fs01/common/widgets/stateless/button/app_button.dart';
 import 'package:fs01/modules/fs01_03/social_app/_23_message_list/_23_message_list.dart';
-import 'package:fs01/modules/fs01_04/exercise_01/download_image_dio.dart';
-import 'package:fs01/modules/fs01_04/exercise_02/pages/data_categories_page.dart';
-
+import 'package:fs01/modules/fs01_04/session_04_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -59,22 +57,11 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => const DownloadImage(),
+                  builder: (_) => const Session04(),
                 ),
               );
             },
             label: 'Session 04',
-          ),
-          AppButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const DataCategories(),
-                ),
-              );
-            },
-            label: 'Session 04-b',
           ),
         ],
       ),

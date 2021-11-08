@@ -9,7 +9,7 @@ part of 'categories.dart';
 ListOfCategories _$ListOfCategoriesFromJson(Map<String, dynamic> json) =>
     ListOfCategories(
       json['code'] as int,
-      (json['category'] as List<dynamic>)
+      (json['data'] as List<dynamic>)
           .map((e) => Category.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -17,7 +17,7 @@ ListOfCategories _$ListOfCategoriesFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ListOfCategoriesToJson(ListOfCategories instance) =>
     <String, dynamic>{
       'code': instance.code,
-      'category': instance.category,
+      'data': instance.data,
     };
 
 Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
@@ -31,7 +31,7 @@ Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
           : DateTime.parse(json['updatedAt'] as String),
       title: json['title'] as String?,
       description: json['description'] as String?,
-      images: json['images'],
+      images: json['images'] as List<dynamic>?,
       photoCounts: json['photoCounts'] as int?,
     );
 

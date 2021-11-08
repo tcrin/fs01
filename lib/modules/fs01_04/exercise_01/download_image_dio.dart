@@ -42,7 +42,6 @@ class _DownloadImageState extends State<DownloadImage> {
         setState(() {
           _isCheckDownload = true;
           percentDownload = (rec / total) * 100;
-          // print('${percentDownload.floor()}');
         });
       });
       setState(() {
