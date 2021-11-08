@@ -4,6 +4,7 @@ import 'package:fs01/modules/fs01_02/session_02_page.dart';
 import 'package:fs01/common/widgets/stateless/button/app_button.dart';
 import 'package:fs01/modules/fs01_03/social_app/_23_message_list/_23_message_list.dart';
 import 'package:fs01/modules/fs01_04/exercise_01/download_image_dio.dart';
+import 'package:fs01/modules/fs01_04/exercise_02/pages/data_categories_page.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -63,6 +64,17 @@ class HomePage extends StatelessWidget {
               );
             },
             label: 'Session 04',
+          ),
+          AppButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const DataCategories(),
+                ),
+              );
+            },
+            label: 'Session 04-b',
           ),
         ],
       ),

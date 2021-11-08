@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:fs01/modules/fs01_04/exercise_02/services/categories_service_api.dart';
+import 'package:fs01/themes/app_colors.dart';
+
 class DataCategories extends StatefulWidget {
   const DataCategories({Key? key}) : super(key: key);
 
@@ -8,11 +11,38 @@ class DataCategories extends StatefulWidget {
 }
 
 class _DataCategoriesState extends State<DataCategories> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    CategoryServiceApi();
+    CategoryServiceApi().fetchCategories();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Fetch API Category'),
+        backgroundColor: AppColor.primaryColor,
+      ),
+      body: FutureBuilder(
+          future: CategoryServiceApi().fetchCategories(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (!snapshot.hasData) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            } else {
+              return ListView.builder(
+                  itemCount: snapshot.data.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(snapshot.data[index].title),
+                    );
+                  });
+            }
+          }),
     );
   }
 }

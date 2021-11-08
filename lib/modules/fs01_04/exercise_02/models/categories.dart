@@ -1,10 +1,10 @@
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'categories.g.dart';
+
 @JsonSerializable()
 class ListOfCategories {
-  final int? code;
+  final int code;
   final List<Category> category;
 
   ListOfCategories(this.code, this.category);
@@ -12,6 +12,7 @@ class ListOfCategories {
   factory ListOfCategories.fromJson(Map<String, dynamic> json) =>
       _$ListOfCategoriesFromJson(json);
 }
+
 @JsonSerializable()
 class Category {
   final String? id;
@@ -20,7 +21,7 @@ class Category {
   final DateTime? updatedAt;
   final String? title;
   final String? description;
-  final String? images;
+  final dynamic images;
   final int? photoCounts;
 
   Category(
