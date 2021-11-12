@@ -48,7 +48,7 @@ class Lesson02 extends StatelessWidget {
                   ),
                 );
               },
-              label: 'Message List page',
+              label: 'Message List pages',
             ),
           ],
         ));

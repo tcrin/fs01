@@ -94,7 +94,7 @@ class _MessageListPageState extends State<MessageListPage> {
             backgroundColor: AppColor.primaryColor,
             title: Text(
               'Message',
-              style: AppStyle.h0
+              style: AppStyle.h1
                   .copyWith(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             actions: [
@@ -139,15 +139,15 @@ class _MessageListPageState extends State<MessageListPage> {
         type: BottomNavigationBarType.fixed,
         currentIndex: selectedIndex,
         onTap: _onItemTapped,
-        selectedItemColor: AppColor.iconColor,
-        unselectedItemColor: AppColor.timeColor,
+        selectedItemColor: AppColor.pinkColor,
+        unselectedItemColor: AppColor.textColor2,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Image.asset(
               AppAsset.home,
               width: 28,
               height: 28,
-              color: selectedIndex == 0 ? AppColor.iconColor : null,
+              color: selectedIndex == 0 ? AppColor.pinkColor : null,
             ),
             label: 'Home',
           ),
@@ -156,7 +156,7 @@ class _MessageListPageState extends State<MessageListPage> {
               AppAsset.streams,
               width: 28,
               height: 28,
-              color: selectedIndex == 1 ? AppColor.iconColor : null,
+              color: selectedIndex == 1 ? AppColor.pinkColor : null,
             ),
             label: 'Streams',
           ),
@@ -165,7 +165,7 @@ class _MessageListPageState extends State<MessageListPage> {
               AppAsset.messages,
               width: 28,
               height: 28,
-              color: selectedIndex == 2 ? AppColor.iconColor : null,
+              color: selectedIndex == 2 ? AppColor.pinkColor : null,
             ),
             label: 'Messages',
           ),
@@ -174,7 +174,7 @@ class _MessageListPageState extends State<MessageListPage> {
               AppAsset.notifications,
               width: 28,
               height: 28,
-              color: selectedIndex == 3 ? AppColor.iconColor : null,
+              color: selectedIndex == 3 ? AppColor.pinkColor : null,
             ),
             label: 'Notifications',
           ),
@@ -183,7 +183,7 @@ class _MessageListPageState extends State<MessageListPage> {
               AppAsset.profiles,
               width: 28,
               height: 28,
-              color: selectedIndex == 4 ? AppColor.iconColor : null,
+              color: selectedIndex == 4 ? AppColor.pinkColor : null,
             ),
             label: 'Profiles',
           ),
