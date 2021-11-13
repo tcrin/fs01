@@ -9,57 +9,39 @@ part 'data.g.dart';
 
 @JsonSerializable()
 class Data {
-  @JsonKey(name: 'id', includeIfNull: false)
   final String? id;
-  @JsonKey(name: 'status', includeIfNull: false)
   final int? status;
-  @JsonKey(name: 'created_at', includeIfNull: false)
-  final DateTime? createdAt;
-  @JsonKey(name: 'updated_at', includeIfNull: false)
-  final DateTime? updatedAt;
-  @JsonKey(name: 'title', includeIfNull: false)
+  final DateTime? created_at;
+  final DateTime? updated_at;
   final String? title;
-  @JsonKey(name: 'description', includeIfNull: false)
   final String? description;
-  @JsonKey(name: 'comment_counts', includeIfNull: false)
-  final int? commentCounts;
-  @JsonKey(name: 'images', includeIfNull: false)
+  final int? comment_counts;
   final List<Images>? images;
-  @JsonKey(name: 'like_counts', includeIfNull: false)
-  final int? likeCounts;
-  @JsonKey(name: 'view_counts', includeIfNull: false)
-  final int? viewCounts;
-  @JsonKey(name: 'pulse_score', includeIfNull: false)
-  final int? pulseScore;
-  @JsonKey(name: 'is_sensitive', includeIfNull: false)
-  final bool? isSensitive;
-  @JsonKey(name: 'is_private', includeIfNull: false)
-  final bool? isPrivate;
-  @JsonKey(name: 'tags', includeIfNull: false)
+  final int? like_counts;
+  final int? view_counts;
+  final int? pulse_score;
+  final bool? is_sensitive;
+  final bool? is_private;
   final List<String>? tags;
-  @JsonKey(name: 'user', includeIfNull: false)
   final User? user;
-  @JsonKey(name: 'category', includeIfNull: false)
   final Category? category;
-  @JsonKey(name: 'photos', includeIfNull: false)
   final List<Photos>? photos;
-  @JsonKey(name: 'liked', includeIfNull: false)
   final bool? liked;
 
   Data(
       {this.id,
       this.status,
-      this.createdAt,
-      this.updatedAt,
+      this.created_at,
+      this.updated_at,
       this.title,
       this.description,
-      this.commentCounts,
+      this.comment_counts,
       this.images,
-      this.likeCounts,
-      this.viewCounts,
-      this.pulseScore,
-      this.isSensitive,
-      this.isPrivate,
+      this.like_counts,
+      this.view_counts,
+      this.pulse_score,
+      this.is_sensitive,
+      this.is_private,
       this.tags,
       this.user,
       this.category,

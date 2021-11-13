@@ -9,23 +9,23 @@ part of 'data.dart';
 Data _$DataFromJson(Map<String, dynamic> json) => Data(
       id: json['id'] as String?,
       status: json['status'] as int?,
-      createdAt: json['created_at'] == null
+      created_at: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
-      updatedAt: json['updated_at'] == null
+      updated_at: json['updated_at'] == null
           ? null
           : DateTime.parse(json['updated_at'] as String),
       title: json['title'] as String?,
       description: json['description'] as String?,
-      commentCounts: json['comment_counts'] as int?,
+      comment_counts: json['comment_counts'] as int?,
       images: (json['images'] as List<dynamic>?)
           ?.map((e) => Images.fromJson(e as Map<String, dynamic>))
           .toList(),
-      likeCounts: json['like_counts'] as int?,
-      viewCounts: json['view_counts'] as int?,
-      pulseScore: json['pulse_score'] as int?,
-      isSensitive: json['is_sensitive'] as bool?,
-      isPrivate: json['is_private'] as bool?,
+      like_counts: json['like_counts'] as int?,
+      view_counts: json['view_counts'] as int?,
+      pulse_score: json['pulse_score'] as int?,
+      is_sensitive: json['is_sensitive'] as bool?,
+      is_private: json['is_private'] as bool?,
       tags: (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList(),
       user: json['user'] == null
           ? null
@@ -39,32 +39,23 @@ Data _$DataFromJson(Map<String, dynamic> json) => Data(
       liked: json['liked'] as bool?,
     );
 
-Map<String, dynamic> _$DataToJson(Data instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('status', instance.status);
-  writeNotNull('created_at', instance.createdAt?.toIso8601String());
-  writeNotNull('updated_at', instance.updatedAt?.toIso8601String());
-  writeNotNull('title', instance.title);
-  writeNotNull('description', instance.description);
-  writeNotNull('comment_counts', instance.commentCounts);
-  writeNotNull('images', instance.images);
-  writeNotNull('like_counts', instance.likeCounts);
-  writeNotNull('view_counts', instance.viewCounts);
-  writeNotNull('pulse_score', instance.pulseScore);
-  writeNotNull('is_sensitive', instance.isSensitive);
-  writeNotNull('is_private', instance.isPrivate);
-  writeNotNull('tags', instance.tags);
-  writeNotNull('user', instance.user);
-  writeNotNull('category', instance.category);
-  writeNotNull('photos', instance.photos);
-  writeNotNull('liked', instance.liked);
-  return val;
-}
+Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
+      'id': instance.id,
+      'status': instance.status,
+      'created_at': instance.created_at?.toIso8601String(),
+      'updated_at': instance.updated_at?.toIso8601String(),
+      'title': instance.title,
+      'description': instance.description,
+      'comment_counts': instance.comment_counts,
+      'images': instance.images,
+      'like_counts': instance.like_counts,
+      'view_counts': instance.view_counts,
+      'pulse_score': instance.pulse_score,
+      'is_sensitive': instance.is_sensitive,
+      'is_private': instance.is_private,
+      'tags': instance.tags,
+      'user': instance.user,
+      'category': instance.category,
+      'photos': instance.photos,
+      'liked': instance.liked,
+    };

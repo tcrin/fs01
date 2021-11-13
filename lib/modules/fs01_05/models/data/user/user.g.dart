@@ -9,32 +9,23 @@ part of 'user.dart';
 User _$UserFromJson(Map<String, dynamic> json) => User(
       id: json['id'] as String?,
       username: json['username'] as String?,
-      firstName: json['first_name'] as String?,
-      lastName: json['last_name'] as String?,
+      first_name: json['first_name'] as String?,
+      last_name: json['last_name'] as String?,
       avatar: json['avatar'] == null
           ? null
           : Avatar.fromJson(json['avatar'] as Map<String, dynamic>),
-      systemRole: json['system_role'] as String?,
-      isVerified: json['is_verified'] as bool?,
-      createdAt: json['created_at'] as String?,
+      system_role: json['system_role'] as String?,
+      is_verified: json['is_verified'] as bool?,
+      created_at: json['created_at'] as String?,
     );
 
-Map<String, dynamic> _$UserToJson(User instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('username', instance.username);
-  writeNotNull('first_name', instance.firstName);
-  writeNotNull('last_name', instance.lastName);
-  writeNotNull('avatar', instance.avatar);
-  writeNotNull('system_role', instance.systemRole);
-  writeNotNull('is_verified', instance.isVerified);
-  writeNotNull('created_at', instance.createdAt);
-  return val;
-}
+Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+      'id': instance.id,
+      'username': instance.username,
+      'first_name': instance.first_name,
+      'last_name': instance.last_name,
+      'avatar': instance.avatar,
+      'system_role': instance.system_role,
+      'is_verified': instance.is_verified,
+      'created_at': instance.created_at,
+    };

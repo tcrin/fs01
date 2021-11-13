@@ -60,8 +60,7 @@ class Post extends StatelessWidget {
             const SizedBox(
               height: 18,
             ),
-            Text(
-              tag!,
+            Text(tag!,
               style: AppStyle.tag,
             ),
             const SizedBox(

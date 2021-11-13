@@ -3,14 +3,11 @@ import 'package:json_annotation/json_annotation.dart';
 part 'param.g.dart';
 @JsonSerializable()
 class Param {
-  @JsonKey(name: 'category_id', includeIfNull: false)
-  List? categoryId;
-  @JsonKey(name: 'lens_id', includeIfNull: false)
-  List? lensId;
-  @JsonKey(name: 'camera_id', includeIfNull: false)
-  List? cameraId;
+  List? category_id;
+  List? lens_id;
+  List? camera_id;
 
-  Param({this.categoryId, this.lensId, this.cameraId});
+  Param({this.category_id, this.lens_id, this.camera_id});
 
   factory Param.fromJson(Map<String, dynamic> json) => _$ParamFromJson(json);
 }

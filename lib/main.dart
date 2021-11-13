@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fs01/modules/fs01_05/blocs/notification_bloc_observer.dart';
 import 'package:fs01/pages/home_page.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 void main() {
+  Bloc.observer = NotificationBlocObserver();
   runApp(const MyApp());
 }
 

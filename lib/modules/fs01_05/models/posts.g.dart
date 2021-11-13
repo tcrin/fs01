@@ -19,18 +19,9 @@ Posts _$PostsFromJson(Map<String, dynamic> json) => Posts(
           : Paging.fromJson(json['paging'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$PostsToJson(Posts instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('code', instance.code);
-  writeNotNull('data', instance.data);
-  writeNotNull('param', instance.param);
-  writeNotNull('paging', instance.paging);
-  return val;
-}
+Map<String, dynamic> _$PostsToJson(Posts instance) => <String, dynamic>{
+      'code': instance.code,
+      'data': instance.data,
+      'param': instance.param,
+      'paging': instance.paging,
+    };

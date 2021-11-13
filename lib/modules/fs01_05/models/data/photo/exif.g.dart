@@ -10,46 +10,34 @@ Exif _$ExifFromJson(Map<String, dynamic> json) => Exif(
       make: json['make'] as String?,
       model: json['model'] as String?,
       flash: json['flash'] as String?,
-      fNumber: json['FNumber'] as String?,
-      dateTimeOriginal: json['DateTimeOriginal'] == null
-          ? null
-          : DateTime.parse(json['DateTimeOriginal'] as String),
-      lensMake: json['LensMake'] as String?,
-      lensModel: json['LensModel'] as String?,
-      focalLength: json['FocalLength'] as String?,
-      focalLengthIn35mmFilm: json['FocalLengthIn35mmFilm'] as String?,
-      exposureMode: json['ExposureMode'] as String?,
-      exposureTime: json['ExposureTime'] as String?,
-      meteringMode: json['MeteringMode'] as String?,
-      iSOSpeedRatings: json['ISOSpeedRatings'] as String?,
-      gPSLatitude: (json['GPSLatitude'] as num?)?.toDouble(),
-      gPSLongitude: (json['GPSLongitude'] as num?)?.toDouble(),
+      FNumber: json['FNumber'] as String?,
+      DateTimeOriginal: json['DateTimeOriginal'] as String?,
+      LensMake: json['LensMake'] as String?,
+      LensModel: json['LensModel'] as String?,
+      FocalLength: json['FocalLength'] as String?,
+      FocalLengthIn35mmFilm: json['FocalLengthIn35mmFilm'] as String?,
+      ExposureMode: json['ExposureMode'] as String?,
+      ExposureTime: json['ExposureTime'] as String?,
+      MeteringMode: json['MeteringMode'] as String?,
+      ISOSpeedRatings: json['ISOSpeedRatings'] as String?,
+      GPSLatitude: (json['GPSLatitude'] as num?)?.toDouble(),
+      GPSLongitude: (json['GPSLongitude'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$ExifToJson(Exif instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('make', instance.make);
-  writeNotNull('model', instance.model);
-  writeNotNull('flash', instance.flash);
-  writeNotNull('FNumber', instance.fNumber);
-  writeNotNull(
-      'DateTimeOriginal', instance.dateTimeOriginal?.toIso8601String());
-  writeNotNull('LensMake', instance.lensMake);
-  writeNotNull('LensModel', instance.lensModel);
-  writeNotNull('FocalLength', instance.focalLength);
-  writeNotNull('FocalLengthIn35mmFilm', instance.focalLengthIn35mmFilm);
-  writeNotNull('ExposureMode', instance.exposureMode);
-  writeNotNull('ExposureTime', instance.exposureTime);
-  writeNotNull('MeteringMode', instance.meteringMode);
-  writeNotNull('ISOSpeedRatings', instance.iSOSpeedRatings);
-  writeNotNull('GPSLatitude', instance.gPSLatitude);
-  writeNotNull('GPSLongitude', instance.gPSLongitude);
-  return val;
-}
+Map<String, dynamic> _$ExifToJson(Exif instance) => <String, dynamic>{
+      'make': instance.make,
+      'model': instance.model,
+      'flash': instance.flash,
+      'FNumber': instance.FNumber,
+      'DateTimeOriginal': instance.DateTimeOriginal,
+      'LensMake': instance.LensMake,
+      'LensModel': instance.LensModel,
+      'FocalLength': instance.FocalLength,
+      'FocalLengthIn35mmFilm': instance.FocalLengthIn35mmFilm,
+      'ExposureMode': instance.ExposureMode,
+      'ExposureTime': instance.ExposureTime,
+      'MeteringMode': instance.MeteringMode,
+      'ISOSpeedRatings': instance.ISOSpeedRatings,
+      'GPSLatitude': instance.GPSLatitude,
+      'GPSLongitude': instance.GPSLongitude,
+    };

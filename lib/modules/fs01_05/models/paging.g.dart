@@ -7,28 +7,19 @@ part of 'paging.dart';
 // **************************************************************************
 
 Paging _$PagingFromJson(Map<String, dynamic> json) => Paging(
-      nextCursor: json['next_cursor'] as String?,
+      next_cursor: json['next_cursor'] as String?,
       cursor: json['cursor'] as String?,
       limit: json['limit'] as int?,
       total: json['total'] as int?,
       page: json['page'] as int?,
-      hasNext: json['has_next'] as bool?,
+      has_next: json['has_next'] as bool?,
     );
 
-Map<String, dynamic> _$PagingToJson(Paging instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('next_cursor', instance.nextCursor);
-  writeNotNull('cursor', instance.cursor);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('total', instance.total);
-  writeNotNull('page', instance.page);
-  writeNotNull('has_next', instance.hasNext);
-  return val;
-}
+Map<String, dynamic> _$PagingToJson(Paging instance) => <String, dynamic>{
+      'next_cursor': instance.next_cursor,
+      'cursor': instance.cursor,
+      'limit': instance.limit,
+      'total': instance.total,
+      'page': instance.page,
+      'has_next': instance.has_next,
+    };

@@ -8,27 +8,18 @@ part of 'avatar.dart';
 
 Avatar _$AvatarFromJson(Map<String, dynamic> json) => Avatar(
       url: json['url'] as String?,
-      orgWidth: json['org_width'] as int?,
-      orgHeight: json['org_height'] as int?,
-      orgUrl: json['org_url'] as String?,
-      cloudName: json['cloud_name'] as String?,
-      dominantColor: json['dominant_color'] as String?,
+      org_width: json['org_width'] as int?,
+      org_height: json['org_height'] as int?,
+      org_url: json['org_url'] as String?,
+      cloud_name: json['cloud_name'] as String?,
+      dominant_color: json['dominant_color'] as String?,
     );
 
-Map<String, dynamic> _$AvatarToJson(Avatar instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('url', instance.url);
-  writeNotNull('org_width', instance.orgWidth);
-  writeNotNull('org_height', instance.orgHeight);
-  writeNotNull('org_url', instance.orgUrl);
-  writeNotNull('cloud_name', instance.cloudName);
-  writeNotNull('dominant_color', instance.dominantColor);
-  return val;
-}
+Map<String, dynamic> _$AvatarToJson(Avatar instance) => <String, dynamic>{
+      'url': instance.url,
+      'org_width': instance.org_width,
+      'org_height': instance.org_height,
+      'org_url': instance.org_url,
+      'cloud_name': instance.cloud_name,
+      'dominant_color': instance.dominant_color,
+    };

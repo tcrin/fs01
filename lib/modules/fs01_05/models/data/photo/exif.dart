@@ -4,53 +4,38 @@ part 'exif.g.dart';
 
 @JsonSerializable()
 class Exif {
-  @JsonKey(name: 'make', includeIfNull: false)
   final String? make;
-  @JsonKey(name: 'model', includeIfNull: false)
   final String? model;
-  @JsonKey(name: 'flash', includeIfNull: false)
   final String? flash;
-  @JsonKey(name: 'FNumber', includeIfNull: false)
-  final String? fNumber;
-  @JsonKey(name: 'DateTimeOriginal', includeIfNull: false)
-  final DateTime? dateTimeOriginal;
-  @JsonKey(name: 'LensMake', includeIfNull: false)
-  final String? lensMake;
-  @JsonKey(name: 'LensModel', includeIfNull: false)
-  final String? lensModel;
-  @JsonKey(name: 'FocalLength', includeIfNull: false)
-  final String? focalLength;
-  @JsonKey(name: 'FocalLengthIn35mmFilm', includeIfNull: false)
-  final String? focalLengthIn35mmFilm;
-  @JsonKey(name: 'ExposureMode', includeIfNull: false)
-  final String? exposureMode;
-  @JsonKey(name: 'ExposureTime', includeIfNull: false)
-  final String? exposureTime;
-  @JsonKey(name: 'MeteringMode', includeIfNull: false)
-  final String? meteringMode;
-  @JsonKey(name: 'ISOSpeedRatings', includeIfNull: false)
-  final String? iSOSpeedRatings;
-  @JsonKey(name: 'GPSLatitude', includeIfNull: false)
-  final double? gPSLatitude;
-  @JsonKey(name: 'GPSLongitude', includeIfNull: false)
-  final double? gPSLongitude;
+  final String? FNumber;
+  final String? DateTimeOriginal;
+  final String? LensMake;
+  final String? LensModel;
+  final String? FocalLength;
+  final String? FocalLengthIn35mmFilm;
+  final String? ExposureMode;
+  final String? ExposureTime;
+  final String? MeteringMode;
+  final String? ISOSpeedRatings;
+  final double? GPSLatitude;
+  final double? GPSLongitude;
 
   Exif(
       {this.make,
       this.model,
       this.flash,
-      this.fNumber,
-      this.dateTimeOriginal,
-      this.lensMake,
-      this.lensModel,
-      this.focalLength,
-      this.focalLengthIn35mmFilm,
-      this.exposureMode,
-      this.exposureTime,
-      this.meteringMode,
-      this.iSOSpeedRatings,
-      this.gPSLatitude,
-      this.gPSLongitude});
+      this.FNumber,
+      this.DateTimeOriginal,
+      this.LensMake,
+      this.LensModel,
+      this.FocalLength,
+      this.FocalLengthIn35mmFilm,
+      this.ExposureMode,
+      this.ExposureTime,
+      this.MeteringMode,
+      this.ISOSpeedRatings,
+      this.GPSLatitude,
+      this.GPSLongitude});
 
   factory Exif.fromJson(Map<String, dynamic> json) => _$ExifFromJson(json);
 }
