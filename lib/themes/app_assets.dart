@@ -15,4 +15,11 @@ class AppAsset {
   static const String love = iconPath + 'love.png';
   static const String comment = iconPath + 'comment.png';
   static const String setting = iconPath + 'setting.png';
+
+  static const String facebook = iconPath + 'facebook.png';
+  static const String twitter = iconPath + 'twitter.png';
+  static const String google = iconPath + 'google.png';
+
+  static const String imageBackground = imagePath + 'background_image.png';
+
 }

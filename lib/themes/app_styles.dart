@@ -3,6 +3,11 @@ import 'package:fs01/themes/app_colors.dart';
 import 'package:fs01/themes/app_fonts.dart';
 
 class AppStyle {
+  static const TextStyle h0 = TextStyle(
+      fontFamily: AppFonts.avenir,
+      fontSize: 44,
+      color: AppColor.textColor,
+      decoration: TextDecoration.none);
   static const TextStyle h1 = TextStyle(
       fontFamily: AppFonts.avenir,
       fontSize: 34,
@@ -23,6 +28,7 @@ class AppStyle {
       fontSize: 11,
       color: AppColor.textColor,
       decoration: TextDecoration.none);
+
 
   static const TextStyle time = TextStyle(
       fontFamily: AppFonts.avenir,
